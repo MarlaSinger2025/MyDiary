@@ -1,5 +1,11 @@
+import Header from "./components/Header";
+
 const App = () => {
-  return <h1 className='text-3xl font-bold underline'>React + TailwindCSS</h1>;
+  return (
+    <div className="bg-slate-600 text-white min-h-screen">
+      <Header />
+    </div>
+  )
 };
 
 export default App;
