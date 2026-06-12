@@ -60,9 +60,10 @@ const EntryForm = () => {
     };
 
     return (
-        <div>
+            <div className="card-body">
             <h2>Add a new diary entry for today</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="flex flex-col gap-4"
+        onSubmit={handleSubmit}>
             <label>
                 <span>Date:</span>
                 <input 
