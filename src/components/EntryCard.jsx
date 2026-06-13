@@ -6,9 +6,10 @@ const EntryCard = ({ date, title, imgUrl }) => {
 	const [detailsModal, setDetailsModal] = useState(false);
 
     return (
+		<>
         <div className='shadow-xl hover:shadow-2xl hover:cursor-pointer w-50 rounded-md m-auto flex-flex-col'
 			onClick={() => {setDetailsModal(true)}}
-		>  {detailsModal && <EntryDetailsModal openModal={setDetailsModal} />}
+		>
 			<figure className='rounded-t-md overflow-hidden w-full'>
 				<img className='w-full h-full' src='https://placedog.net/800/640?id=185' alt={title} />
                 {/* <img className='w-full h-full' src={imgUrl} alt={title} /> */}
@@ -18,6 +19,10 @@ const EntryCard = ({ date, title, imgUrl }) => {
 				<h2 className='text-2xl'>My best friend</h2>
 			</div>
 		</div>
+		 {detailsModal && (
+        <EntryDetailsModal openModal={setDetailsModal} />
+    )}
+		</>
     );
 };
 

@@ -1,20 +1,21 @@
-import { useState } from "react";
+
 import AddEntryModal from "./AddEntryModal";
 
-const Navigation = () => {
+const Navigation = ({ openModal}) => {
 
-    const [modal, setModal] = useState(false);
+
 
     return (
         <div>
-            <button className="btn btn-soft btn-accent"
-                onClick={() => {setModal(true)}} >
+            <button className="px-6 py-3 font-semibold text-slate-800 rounded-full bg-linear-to-r from-[#5BCEFA] via-[#F5A9B7] to-[#FFFFFF] border border-slate-300 shadow-md hover:scale-105 transition-all duration-200"
+                onClick={openModal} >
                     New Entry</button>
-            {modal && <AddEntryModal openModal={setModal} />}
         </div>
 
     );
 };
 
 export default Navigation;
+
+//<button className="btn btn-soft btn-accent"
 
