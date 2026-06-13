@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EntryForm = () => {
+const AddEntryForm = () => {
 
     const [form, setForm] = useState({
         date: '',
@@ -109,4 +109,4 @@ const EntryForm = () => {
     );
 };
 
-export default EntryForm;
+export default AddEntryForm;

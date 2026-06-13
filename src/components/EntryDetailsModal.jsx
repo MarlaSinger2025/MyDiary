@@ -1,10 +1,10 @@
-import AddEntryForm from "./AddEntryForm";
+import EntryDetails from "./EntryDetails";
 
-const AddEntryModal = ({openModal}) => {
+const EntryDetailsModal = ({openModal}) => {
     return (
         <div className="modal modal-open">
             <div className="modal-box max-w-lg p-0 overflow-hidden">
-            <AddEntryForm />
+            <EntryDetails />
             <div className="modal-action">
             <button className="btn"
             onClick={() => openModal(false)} >X</button>
@@ -14,5 +14,5 @@ const AddEntryModal = ({openModal}) => {
     );
 };
 
-export default AddEntryModal;
+export default EntryDetailsModal;
 
