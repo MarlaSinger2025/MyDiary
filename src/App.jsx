@@ -9,7 +9,7 @@ const App = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    <div>
+    <div className="h-screen">
       <Header openModal={() => setModal(true)}  />
         {modal && (
             <AddEntryModal openModal={setModal} />

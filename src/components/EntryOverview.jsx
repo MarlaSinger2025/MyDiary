@@ -10,7 +10,7 @@ const EntryOverview = () => {
     );
 
    return (
-        <div className='flex justify-center flex-wrap gap-4 p-4 w-full'>
+        <div className="flex flex-wrap gap-6 p-4 justify-start">
             {sortedEntries.map((entry) => (
                 <EntryCard key={entry.date} {...entry} />
             ))}

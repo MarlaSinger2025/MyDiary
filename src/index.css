@@ -8,3 +8,7 @@
     --font-heading: "Caprasimo", serif;
     --font-body: "Quicksand", sans-serif;
 }
+
+body {
+    background-color: white;
+}

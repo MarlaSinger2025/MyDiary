@@ -17,11 +17,11 @@ const EntryCard = ({ date, title, imgUrl, content }) => {
 
     return (
 		<>
-        <div className='shadow-xl hover:shadow-2xl hover:cursor-pointer w-50 rounded-md m-auto flex-flex-col'
+        <div className='shadow-xl hover:shadow-2xl hover:cursor-pointer w-50 rounded-md m-auto flex-flex-col h-63'
 			onClick={() => {setDetailsModal(true)}}
 		>
 			<figure className='rounded-t-md overflow-hidden w-full'>
-                <img className='w-full h-full' src={imgUrl} alt={title} />
+                <img className='w-full h-[150px]' src={imgUrl} alt={title} />
 			</figure>
 			<div className='flex flex-col p-6 pt-2 rounded-b-md bg-white'>
                 <p className="text-end text-sm text-gray-600">{formatDate(date)}</p>
