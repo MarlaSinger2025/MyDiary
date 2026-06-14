@@ -1,16 +1,21 @@
+
+
 const EntryDetails = ({ date, title, imgUrl, content }) => {
     return (
-        <div className='shadow-xl hover:shadow-2xl hover:cursor-pointer w-50 rounded-md m-auto flex-flex-col'>
+        <div className=''>
 			<figure className='rounded-t-md overflow-hidden w-full'>
-				<img className='w-full h-full' src='https://placedog.net/800/640?id=185' alt={title} />
-                {/* <img className='w-full h-full' src={imgUrl} alt={title} /> */}
+                <img className='w-full h-full' src={imgUrl} alt={title} />
 			</figure>
-			<div className='flex flex-col p-6 pt-2 rounded-b-md bg-slate-800 h-40'>
+			<div className=''>
                 <p className="text-end">{date}</p>
-				<h2 className='text-2xl'>My best friend</h2>
+				<h2 className='text-xl'>{title}</h2>
+				<p>{content} </p>
 			</div>
 		</div>
     );
+	
 };
 
 export default EntryDetails;
+
+// <div className='shadow-xl hover:shadow-2xl hover:cursor-pointer w-50 rounded-md m-auto flex-flex-col'>

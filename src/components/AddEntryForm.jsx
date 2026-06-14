@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useEntry } from "../context/EntryContext";
 
-const AddEntryForm = () => {
+const AddEntryForm = ( {onSuccess }) => {
 
-    // UNCOMMENT once EntryContext is finished
-    // const { entries, addEntry } = useEntries(); 
+   
+    const { entries, addEntry } = useEntry(); 
 
     const [form, setForm] = useState({
         date: '',
@@ -36,16 +37,16 @@ const AddEntryForm = () => {
         if (!form.imgUrl.trim())  {newErrors.imgUrl = 'Image is required';}
         if (!form.content.trim())  {newErrors.content = 'Please write some content!';}
     
-        /// UNCOMMENT once EntryContext is finished
+       
 
-    //     const entryExists = entries.some(  
-    //     (entry) => entry.date === form.date
-    // );
+        const entryExists = entries.some(  
+        (entry) => entry.date === form.date
+    );
 
-    // if (form.date && entryExists) {
-    //     newErrors.date =
-    //         "You've already written today's entry. Come back tomorrow!";
-    // }
+    if (form.date && entryExists) {
+        newErrors.date =
+            "You've already written today's entry. Come back tomorrow!";
+    }
 
          return newErrors;
     };
@@ -61,9 +62,19 @@ const AddEntryForm = () => {
          }
 
         setErrors({});   // clear any old errors
-       // addEntry(form); // NEEDS CODE FOR ADDING / localStorage!!  
+       
+        addEntry(form);
 
-       // closeModal(); // OR DO I WANT A SUCCESS MESSAGE Shown and people have to click X button to exit?
+        setForm({
+            date: '',
+            title: '',
+            imgUrl: '',
+            content: '',
+        });
+
+        if(onSuccess) {
+            onSuccess();
+        }
          console.log('Entry submitted:', form);
     };
 
