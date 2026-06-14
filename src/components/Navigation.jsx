@@ -1,6 +1,3 @@
-
-import AddEntryModal from "./AddEntryModal";
-
 const Navigation = ({ openModal}) => {
 
 
@@ -16,6 +13,4 @@ const Navigation = ({ openModal}) => {
 };
 
 export default Navigation;
-
-//<button className="btn btn-soft btn-accent"
 

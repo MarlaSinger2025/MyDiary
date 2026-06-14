@@ -10,8 +10,8 @@ const EntryDetailsModal = ({openModal, title, date, imgUrl, content }) => {
                           imgUrl={imgUrl}
                           content={content}
             />
-            <div className="modal-action">
-            <button className="btn"
+            <div className="modal-action mt-0 mr-2 mb-2">
+            <button className="btn btn-circle btn-soft btn-primary"
             onClick={() => openModal(false)} >X</button>
             </div>
         </div>
